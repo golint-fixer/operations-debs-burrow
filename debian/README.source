@@ -1,0 +1,14 @@
+Packaging Go for debian is hard!  Since we don't want to depend on non debian
+internet based dependecies at build time, dependencies have been precomplied
+and collected.  Currently only x86_64-linux-gnu is built.  These are located
+at debian/godeps/obj-x86_64-linux-gnu.  This directory is symlinked to the
+GOPATH used by dh_golang at build time.
+
+To build dependencies for another architecture, do the following:
+
+  ARCH=$(dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+  export GOPATH=$(pwd)/debian/godeps/obj-${ARCH}
+  # downloads and builds deps and stores them in $GOPATH
+  gpm install
+
+You can then add and commit $GOPATH to this repo.

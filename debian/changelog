@@ -1,0 +1,5 @@
+burrow (0.1.0-1) jessie-wikimedia; urgency=low
+
+  * Initial debian packaging
+
+ -- Andrew Otto (WMF) <otto@wikimedia.org>  Thu, 22 Oct 2015 21:15:00 +0000

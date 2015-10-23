@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+export DH_OPTIONS
+export DH_GOPKG := github.com/linkedin/Burrow
+
+# go dependencies have been precompiled and collected in
+# debian/godeps/obj-${ARCH} by running:
+#
+#   export GOPATH=./debian/godeps/obj-$(dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+#   gpm install
+#
+ARCH := $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+
+%:
+	ln -s $(CURDIR)/debian/godeps/obj-${ARCH} $(CURDIR)/obj-${ARCH}
+	dh $@ --buildsystem=golang --with=golang
+
+override_dh_installinit:
+	# Install the Burrow service as 'burrow', not 'golang-burrow'
+	# Also, don't start on install!
+	dh_installinit --name=burrow --no-start

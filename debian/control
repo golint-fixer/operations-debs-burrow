@@ -1,0 +1,24 @@
+Source: burrow
+Section: devel
+Priority: extra
+Maintainer: Andrew Otto
+Build-Depends: debhelper (>= 9), dh-golang, golang-go, dh-systemd
+Standards-Version: 3.9.5
+Vcs-Git: https://github.com/linkedin/Burrow
+Vcs-Browser: https://github.com/linkedin/Burrow
+Homepage: https://github.com/linkedin/Burrow
+
+Package: burrow
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}, golang-go
+Built-Using: ${misc:Built-Using}
+Description: Kafka Burrow
+ Burrow - Kafka Consumer Offset Monitor
+ .
+ Burrow is a monitoring companion for Apache Kafka that provides consumer lag
+ checking as a service without the need for specifying thresholds. It monitors
+ committed offsets for all consumers and calculates the status of those
+ consumers on demand. An HTTP endpoint is provided to request status on demand,
+ as well as provide other Kafka cluster information. There are also
+ configurable notifiers that can send status out via email or HTTP calls to
+ another service.

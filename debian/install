@@ -1,0 +1,5 @@
+debian/config/burrow.cfg etc/burrow/
+debian/config/logging.cfg etc/burrow/
+config/default-email.tmpl etc/burrow/
+config/default-http-delete.tmpl etc/burrow/
+config/default-http-post.tmpl etc/burrow/
