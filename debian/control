@@ -1,9 +1,10 @@
 Source: burrow
 Section: devel
 Priority: extra
-Maintainer: Andrew Otto
+Maintainer: Andrew Otto <aotto@wikimedia.org>
+Uploaders: Luca Toscano <ltoscano@wikimedia.org>
 Build-Depends: debhelper (>= 9), dh-golang, golang-go, dh-systemd
-Standards-Version: 3.9.5
+Standards-Version: 3.9.8
 Vcs-Git: https://github.com/linkedin/Burrow
 Vcs-Browser: https://github.com/linkedin/Burrow
 Homepage: https://github.com/linkedin/Burrow

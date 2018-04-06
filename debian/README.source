@@ -12,3 +12,10 @@ To build dependencies for another architecture, do the following:
   gpm install
 
 You can then add and commit $GOPATH to this repo.
+
+Update up to 04/2018: the gpm command seems deprecated,
+in favor of the super new 'dep' that is not available yet
+on our building hosts.
+A trick to update the godeps is to use
+'go get github.com/linkedin/Burrow' after setting the GOPATH
+as outlined above.
