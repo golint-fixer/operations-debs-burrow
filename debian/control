@@ -11,7 +11,7 @@ Homepage: https://github.com/linkedin/Burrow
 
 Package: burrow
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}, golang-go
+Depends: ${misc:Depends}, ${shlibs:Depends}, golang-go, adduser
 Built-Using: ${misc:Built-Using}
 Description: Kafka Burrow
  Burrow - Kafka Consumer Offset Monitor

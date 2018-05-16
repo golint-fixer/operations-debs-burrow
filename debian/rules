@@ -12,9 +12,9 @@ ARCH := $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
 
 %:
 	ln -s $(CURDIR)/debian/godeps/obj-${ARCH} $(CURDIR)/obj-${ARCH}
-	dh $@ --buildsystem=golang --with=golang
+	dh $@ --buildsystem=golang --with=golang --with systemd
 
 override_dh_installinit:
 	# Install the Burrow service as 'burrow', not 'golang-burrow'
 	# Also, don't start on install!
-	dh_installinit --name=burrow --no-start
+	# dh_installinit --name=burrow --no-start

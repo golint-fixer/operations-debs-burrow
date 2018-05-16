@@ -1,3 +1,13 @@
+burrow (1.1.0-1) jessie-wikimedia; urgency=low
+
+  * Upgrade Burrow code to 1.1
+  * Upgrade godeps dependencies.
+  * Modify rules to use systemd only.
+  * Modify control to explicitly list adduser as burrow's dep.
+  * Modify the burrow.system unit with the new --config-dir param.
+
+ -- Luca Toscano (WMF) <ltoscano@wikimedia.org>  Wed, 16 May 2018 10:15:00 +0000
+
 burrow (1.0.0-1) jessie-wikimedia; urgency=low
 
   * Upgrade Burrow code to 1.0
